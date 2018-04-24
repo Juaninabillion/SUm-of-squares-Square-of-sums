@@ -1,0 +1,42 @@
+
+<html>
+
+<body>
+
+
+<script>
+var answer = 0;
+var answer2 = 0;
+sum_of_squares(100);
+square_of_sum(100);
+
+function sum_of_squares(limit){
+	if (limit > 0){
+		sum_of_squares(limit-1)
+	}
+  	answer += Math.pow(limit,2);
+}
+console.log(answer);
+
+
+function square_of_sum(limit){
+	if (limit > 0){
+		square_of_sum(limit-1)
+	}
+  	answer2 += limit;
+}
+console.log(Math.pow(answer2,2));
+
+alert("Answer = " + (Math.pow(answer2,2) - answer));
+</script>
+
+<p>
+The sum of the squares of the first ten natural numbers is,
+12 + 22 + ... + 102 = 385
+The square of the sum of the first ten natural numbers is,
+(1 + 2 + ... + 10)2 = 552 = 3025
+Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 − 385 = 2640.
+Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
+</p>
+</body>
+</html>
